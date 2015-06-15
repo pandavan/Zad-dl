@@ -1,8 +1,6 @@
 #!/bin/bash
-#
+#https://github.com/pandavan/Zad-dl
 #Zad-dl; Download videos, audios or playlist using this code
-
-
 
 function YouDown {
 	
