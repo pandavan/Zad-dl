@@ -3,7 +3,7 @@ A simple DIY audio video downlader script for ubuntu distro's. The purpose of Za
 
                               Zentiy + Yad + Youtube-dl = Zad-dl
                         
-Zad-dl is a single bash script when executed will automaticlly downloads necessary programms and creates a shortcut in unity launcher (current user). It can be used to download audio's (mp3, m4a etc) and videos (mp4,3gp..etc) in different qualities. It also help you to download playlist from youtube also with video and audio format.
+Zad-dl is a single bash script when executed will automaticlly downloads necessary programms and creates a shortcut in unity launcher (current user). It can be used to download audio's (mp3, m4a etc) and videos (mp4,3gp..etc) in different qualities. It also help you to download playlist from youtube also with video and audio format.  Other supported website can be seen [here](https://rg3.github.io/youtube-dl/supportedsites.html)
 
                                    How to use Zad-dl
 
