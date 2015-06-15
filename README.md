@@ -8,11 +8,17 @@ Zad-dl is a single bash script when executed will automaticlly downloads necessa
 #How to use Zad-dl
 
 Package Installation  (Initial step)
+
 Download the Zad-dl.sh script
+
 Make it executable "chmod u+x Zad-dl.sh"
+
 If programms are needed it will ask for your permission to download those packages.
+
 Try executing Zad-dl.sh for two or more times till a GUI window is open (its an issue which has to be solved)
+
 Once GUI window is open you are read for downloading files
+
 Reboot your system.
 
 #Creating Laucher shortcut
