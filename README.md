@@ -1,5 +1,5 @@
 # Zad-dl
-A simple DIY audio video downlader script for ubuntu distro's. The purpose of Zad-dl is not to replace any existing downloader but helping novice programmer to create their own. This script can be used as a teaching or studying tool for early programmers. Zad-dl uses different third party programms such as YAD, Youtube-dl and xcel for its functions, in a true sense Youtube-dl is the heart of this programme. For creating its Interface two GUI makers were used one is the Zenity an default programm available in ubuntu distros and YAD. The name Zad-dl is born from the component programms used
+A simple DIY audio video downlader script for ubuntu distro's. The purpose of Zad-dl is not to replace any existing downloader but helping novice programmer to create their own. This script can be used as a teaching or studying tool for early programmers. Zad-dl uses different third party programms such as [YAD](http://sourceforge.net/projects/yad-dialog/), [Youtube-dl](https://rg3.github.io/youtube-dl/) and [xcel](https://github.com/kfish/xsel) for its functions, in a true sense Youtube-dl is the heart of this programme. For creating its Interface two GUI makers were used one is the Zenity an default programm available in ubuntu distros and YAD. The name Zad-dl is born from the component programms used
 
                               Zentiy + Yad + Youtube-dl = Zad-dl
                         
@@ -17,7 +17,7 @@ Zad-dl is a single bash script when executed will automaticlly downloads necessa
 
 * Try executing Zad-dl.sh for two or more times till a GUI window is open (its an issue which has to be solved)
 
-* Once GUI window is open you are read for downloading files
+* Once GUI window is open you are ready for downloading files
 
 * Reboot your system.
 
