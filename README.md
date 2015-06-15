@@ -3,11 +3,11 @@ A simple DIY audio video downlader script for ubuntu distro's. The purpose of Za
 
                               Zentiy + Yad + Youtube-dl = Zad-dl
                         
-Zad-dl is a single bash script when executed will automaticlly downloads necessary programms and creates a shortcut in unity launcher (current user). It can be used to download audio's (mp3,m4a etc) and videos (mp4,3gp..etc) in different qualities.
+Zad-dl is a single bash script when executed will automaticlly downloads necessary programms and creates a shortcut in unity launcher (current user). It can be used to download audio's (mp3, m4a etc) and videos (mp4,3gp..etc) in different qualities. It also help you to download playlist from youtube also with video and audio format.
 
-#How to use Zad-dl
+                                   How to use Zad-dl
 
-Package Installation  (Initial step)
+#Package Installation  (Initial step)
 
 Download the Zad-dl.sh script
 
@@ -24,13 +24,27 @@ Reboot your system.
 #Creating Laucher shortcut
 
 After the reboot
+
 Open Dash and type "Zad-dl" without quotes
+
 You will see a red download icon.
+
 click open and lauch
+
 In the launcher using third mouse open the menu and Lock the Zad-dl
 
 #Downloading files
 
-Copy a 
+Copy a audio,vidoe html link (ex: youtube,vimeo,daily motion etc)
+
 Click the Zad-dl icon in laucher
-A GUI Window will open asking for
+
+A GUI Window will open with URL box and a file selection box
+
+Select the directory in which you want to save the file
+
+Click Ok and a new list window will open
+
+Select the format you need (mp3, flv etc)
+
+Click start and a progress window will open showing the progress of the file download
