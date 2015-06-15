@@ -9,42 +9,42 @@ Zad-dl is a single bash script when executed will automaticlly downloads necessa
 
 #Package Installation  (Initial step)
 
-Download the Zad-dl.sh script
+* Download the Zad-dl.sh script
 
-Make it executable "chmod u+x Zad-dl.sh"
+* Make it executable "chmod u+x Zad-dl.sh"
 
-If programms are needed it will ask for your permission to download those packages.
+* If programms are needed it will ask for your permission to download those packages.
 
-Try executing Zad-dl.sh for two or more times till a GUI window is open (its an issue which has to be solved)
+* Try executing Zad-dl.sh for two or more times till a GUI window is open (its an issue which has to be solved)
 
-Once GUI window is open you are read for downloading files
+* Once GUI window is open you are read for downloading files
 
-Reboot your system.
+* Reboot your system.
 
 #Creating Laucher shortcut
 
-After the reboot
+* After the reboot
 
-Open Dash and type "Zad-dl" without quotes
+* Open Dash and type "Zad-dl" without quotes
 
-You will see a red download icon.
+* You will see a red download icon.
 
-click open and lauch
+* click open and launch
 
-In the launcher using third mouse open the menu and Lock the Zad-dl
+* In the launcher using third mouse open the menu and Lock the Zad-dl
 
 #Downloading files
 
-Copy a audio,vidoe html link (ex: youtube,vimeo,daily motion etc)
+* Copy a audio,vidoe html link (ex: youtube,vimeo,daily motion etc)
 
-Click the Zad-dl icon in laucher
+* Click the Zad-dl icon in laucher
 
-A GUI Window will open with URL box and a file selection box
+* A GUI Window will open with URL box and a file selection box
 
-Select the directory in which you want to save the file
+* Select the directory in which you want to save the file
 
-Click Ok and a new list window will open
+* Click Ok and a new list window will open
 
-Select the format you need (mp3, flv etc)
+* Select the format you need (mp3, flv etc)
 
-Click start and a progress window will open showing the progress of the file download
+* Click start and a progress window will open showing the progress of the file download
