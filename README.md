@@ -49,7 +49,7 @@ Zad-dl is a single bash script when executed will automaticlly downloads necessa
 * Select the format you need (mp3, flv etc)
 
 * Click start and a progress window will open showing the progress of the file download
-* 
+
 
 #Using Proxy
 * During installation *proxychains* is installed
