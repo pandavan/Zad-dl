@@ -106,12 +106,14 @@ fi
 fi
 }
 
-echo -e "#If this is your first time using zad-dl it will automatically check and install programms and packages required for running this app.\n\nPlease provide necessary password when asked.\n\nIt may take few minutes to download all packages"
+echo -e "Welcome to Zad-dl...A DIY downloader for Ubuntu distros"
 
 #checking necessary programms installed or not
 if [ ! -x "$(command -v youtube-dl)" ] ||  [ ! -x "$(command -v xsel)" ] || [ ! -x "$(command -v proxychains)" ] \
     [ ! -x "$(command -v yad)" ] || [[ ! -f $HOME/.local/share/applications/Zad-dl.desktop ]] \
-   || [[ ! -d $HOME/.zad-dl ]] || ! -f $HOME/.zad-dl/gtao4rj.png ]] || ! -f $HOME/.zad-dl/Zad-dl.sh ]] ; then
+   || [[ ! -d $HOME/.zad-dl ]] || [[! -f $HOME/.zad-dl/gtao4rj.png ]] || ! -f $HOME/.zad-dl/Zad-dl.sh ]] ; then
+   
+echo -e "#If this is your first time using zad-dl it will automatically check and install programms and packages required for running this app.\n\nPlease provide necessary password when asked.\n\nIt may take few minutes to download all packages"
 
 if ! [ -x "$(command -v youtube-dl)" ]; then
 echo -e "\nInstalling youtube-dl\n"
@@ -146,7 +148,7 @@ Type=Application
 StartupNotify=true
 EOL
 fi
-if [[ ! -d $HOME/.zad-dl || ! -f $HOME/.zad-dl/gtao4rj.png ]]|| ! -f $HOME/.zad-dl/Zad-dl.sh ]]; then
+if [[ ! -d $HOME/.zad-dl || [[ ! -f $HOME/.zad-dl/gtao4rj.png ]]|| ! -f $HOME/.zad-dl/Zad-dl.sh ]]; then
 echo -e "\nDownloading Icon for Launcher\n"
 mkdir -p $HOME/.zad-dl/
 cp $(readlink -f $0) $HOME/.zad-dl/Zad-dl.sh
