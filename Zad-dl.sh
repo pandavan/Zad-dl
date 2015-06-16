@@ -17,13 +17,23 @@ else
     clpy="http://"
 fi
 
-OUTPUT="$(yad --width="500" --title="Zad-dl" --text="Download audio and video files" --form --field="URL" --field="Directory:MDIR" --field="Proxychains:CHK" "$clpy" "$HOME/Desktop/" FALSE --button="gtk-ok:0" --button="gtk-cancel:1")"
+OUTPUT="$(yad --width="500" --title="Zad-dl" --text="Download audio and video files" --form --field="URL" --field="Directory:MDIR" --field="Proxychains:CHK" "$clpy" "$HOME/Desktop/" FALSE --button="Fetch URL:2" --button="gtk-ok:0" --button="gtk-cancel:1")"
   
 accepted=$?
-if ((accepted != 0)); then
-    echo "something went wrong"
+
+if [ $accepted -eq 2 ]; then
+YouDown;
+exit
+elif [ $accepted -eq 1 ]; then
+    echo "Cancelled"
     exit 1
+elif  [ $accepted -eq 0 ]; then
+echo ""
+else
+ echo "something went wrong"
+ exit 1 
 fi
+
 URLy=$(awk -F'|' '{print $1}' <<<$OUTPUT)
 DIRE=$(awk -F '|' '{print $2}' <<<$OUTPUT)
 CHKy=$(awk -F '|' '{print $3}' <<<$OUTPUT)
