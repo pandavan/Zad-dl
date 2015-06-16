@@ -52,6 +52,6 @@ Zad-dl is a single bash script file when executed will automaticlly downloads ne
 
 
 #Using Proxy
-* During installation **proxychains** is installed
+* During installation [proxychains](http://proxychains.sourceforge.net/) is installed
 * While using **Zad-dl** choose **proxychain** option
 * Down side of using proxy is download speed is slower
