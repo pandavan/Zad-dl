@@ -2,6 +2,8 @@
 #https://github.com/pandavan/Zad-dl
 #Zad-dl; Download videos, audios or playlist using this code
 
+
+
 function YouDown {
 	
 # Copying and validation of url from clipbord using xsel
@@ -45,7 +47,7 @@ fi
 
 #Selecting a format to download, added addition line 'mp3'
 
-FRMT=$($prox youtube-dl -F $URLy |grep -vE '^\[(youtube|info|download|youtube:playlist)\]'| sed '1imp3' |zenity  --list --width=500 --height=400 --title="Zad-dl" --text "Fetching audio, video format... $msg" --ok-label="Start" --column "File Format"); 
+FRMT=$($prox youtube-dl -F $URLy |grep -vE '^\[(youtube|info|download|youtube:playlist)\] |^format |^ProxyChains'| sed '1imp3' |zenity  --list --width=500 --height=400 --title="Zad-dl" --text "Fetching audio, video format... $msg" --ok-label="Start" --column "File Format"); 
 
 if [[ $? -eq 1 ]]; then
 zenity --info --width=300 --title="Zad-dl" --timeout=2 --text="Task Quit"
@@ -97,24 +99,32 @@ fi
 echo -e "#If this is your first time using zad-dl it will automatically check and install programms and packages required for running this app.\n\nPlease provide necessary password when asked.\n\nIt may take few minutes to download all packages"
 
 #checking necessary programms installed or not
+if [ ! -x "$(command -v youtube-dl)" ] ||  [ ! -x "$(command -v xsel)" ] || [ ! -x "$(command -v proxychains)" ] \
+    [ ! -x "$(command -v yad)" ] || [[ ! -f $HOME/.local/share/applications/Zad-dl.desktop ]] \
+   || [[ ! -d $HOME/.zad-dl ]] ; then
+
 if ! [ -x "$(command -v youtube-dl)" ]; then
-echo -e "Installing youtube-dl\n"
-sudo add-apt-repository ppa:nilarimogard/webupd8 &&
-sudo apt-get update &&
+echo -e "\nInstalling youtube-dl\n"
+sudo add-apt-repository ppa:nilarimogard/webupd8 
+sudo apt-get update 
 sudo apt-get install youtube-dl
-elif ! [ -x "$(command -v xsel)" ]; then
-echo -e "Installing xsel\n"
+fi
+if ! [ -x "$(command -v xsel)" ]; then
+echo -e "\nInstalling xsel\n"
 sudo apt-get install xsel 
-elif ! [ -x "$(command -v proxychains)" ]; then
-echo -e "Installing proxychains\n"
+fi
+if ! [ -x "$(command -v proxychains)" ]; then
+echo -e "\nInstalling proxychains\n"
 sudo apt-get install proxychains tor obfsproxy
-elif ! [ -x "$(command -v yad)" ]; then
-echo -e "Installing yad\n"
-sudo add-apt-repository ppa:webupd8team/y-ppa-manager &&
-sudo apt-get update &&
+fi
+if ! [ -x "$(command -v yad)" ]; then
+echo -e "\nInstalling yad\n"
+sudo add-apt-repository ppa:webupd8team/y-ppa-manager 
+sudo apt-get update
 sudo apt-get install yad
-elif [ ! -f $HOME/.local/share/applications/Zad-dl.desktop ]; then
-echo -e "Creating a Launcher file details and icon for current user\n"
+fi
+if [[ ! -f $HOME/.local/share/applications/Zad-dl.desktop ]]; then
+echo -e "\nCreating a Launcher file details and icon for current user\n"
 cat >$HOME/.local/share/applications/Zad-dl.desktop<<EOL
 [Desktop Entry]
 Name=Zad-dl
@@ -125,12 +135,15 @@ Terminal=false
 Type=Application
 StartupNotify=true
 EOL
-elif [ ! -d $HOME/.zad-dl ]; then
-echo -e "Downloading Icon for Launcher\n"
+fi
+if [[ ! -d $HOME/.zad-dl ]]; then
+echo -e "\nDownloading Icon for Launcher\n"
 mkdir -p $HOME/.zad-dl/
 cp $(readlink -f $0) $HOME/.zad-dl
-wget -P $HOME/.zad-dl http://i.imgur.com/gtao4rj.png
+wget -P $HOME/.zad-dl/ http://i.imgur.com/gtao4rj.png
 #icon courtsey https://www.iconfinder.com/icons/406708/download_icon#size=128
+fi
+
 else
 echo -e "\nAll programms and packages installed"
 
