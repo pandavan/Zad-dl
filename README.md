@@ -3,7 +3,8 @@ A simple DIY audio/video downlader script for ubuntu distro's. The purpose of Za
 
                               Zentiy + Yad + Youtube-dl = Zad-dl
                         
-Zad-dl is a single bash script file when executed will automaticlly downloads necessary programms and creates a shortcut in unity launcher for current user. It can be used to download audio's (mp3, m4a etc) and videos (mp4,3gp..etc) in different qualities. It also helps you to download playlist from youtue with different video and audio format.  Other supported website can be seen [here](https://rg3.github.io/youtube-dl/supportedsites.html)
+Zad-dl is a single bash script file when executed will automaticlly downloads necessary programms and creates a shortcut in unity launcher for current user. It can be used to download audio's (mp3, m4a etc) and videos (mp4,3gp..etc) in different qualities. It also helps you to download playlist from youtue with different video and audio format.  Other supported website can be seen [here](https://rg3.github.io/youtube-dl/supportedsites.html).
+
 
 ## How to use Zad-dl
 
@@ -22,7 +23,7 @@ Zad-dl is a single bash script file when executed will automaticlly downloads ne
 
 * Reboot your system.
 
-#Creating Launcher shortcut
+#Creating Launcher shortcut for Ubuntu
 
 * After the reboot
 
@@ -55,3 +56,7 @@ Zad-dl is a single bash script file when executed will automaticlly downloads ne
 * During installation [proxychains](http://proxychains.sourceforge.net/) is installed
 * While using **Zad-dl** choose **proxychain** option
 * Down side of using proxy is download speed is slower
+
+
+  *P.S. Current Zad-dl script was made and tried in latest Ubuntu system only* 
+
