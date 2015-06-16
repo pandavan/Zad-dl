@@ -111,7 +111,7 @@ echo -e "#If this is your first time using zad-dl it will automatically check an
 #checking necessary programms installed or not
 if [ ! -x "$(command -v youtube-dl)" ] ||  [ ! -x "$(command -v xsel)" ] || [ ! -x "$(command -v proxychains)" ] \
     [ ! -x "$(command -v yad)" ] || [[ ! -f $HOME/.local/share/applications/Zad-dl.desktop ]] \
-   || [[ ! -d $HOME/.zad-dl ]] ; then
+   || [[ ! -d $HOME/.zad-dl ]] || ! -f $HOME/.zad-dl/gtao4rj.png ]] || ! -f $HOME/.zad-dl/Zad-dl.sh ]] ; then
 
 if ! [ -x "$(command -v youtube-dl)" ]; then
 echo -e "\nInstalling youtube-dl\n"
@@ -146,11 +146,11 @@ Type=Application
 StartupNotify=true
 EOL
 fi
-if [[ ! -d $HOME/.zad-dl || ! -f $HOME/.zad-dl/gtao4rj.png ]]; then
+if [[ ! -d $HOME/.zad-dl || ! -f $HOME/.zad-dl/gtao4rj.png ]]|| ! -f $HOME/.zad-dl/Zad-dl.sh ]]; then
 echo -e "\nDownloading Icon for Launcher\n"
 mkdir -p $HOME/.zad-dl/
-cp $(readlink -f $0) $HOME/.zad-dl
-wget -P $HOME/.zad-dl/ http://i.imgur.com/gtao4rj.png
+cp $(readlink -f $0) $HOME/.zad-dl/Zad-dl.sh
+wget -N -P $HOME/.zad-dl/ http://i.imgur.com/gtao4rj.png
 #icon courtsey https://www.iconfinder.com/icons/406708/download_icon#size=128
 fi
 
@@ -159,5 +159,4 @@ echo -e "\nAll programms and packages installed"
 
 YouDown;
 fi
-
 
