@@ -136,7 +136,7 @@ Type=Application
 StartupNotify=true
 EOL
 fi
-if [[ ! -d $HOME/.zad-dl ]]; then
+if [[ ! -d $HOME/.zad-dl || ! -f $HOME/.zad-dl/gtao4rj.png ]]; then
 echo -e "\nDownloading Icon for Launcher\n"
 mkdir -p $HOME/.zad-dl/
 cp $(readlink -f $0) $HOME/.zad-dl
