@@ -144,6 +144,7 @@ mkdir -p $HOME/.zad-dl/
 cp $(readlink -f $0) $HOME/.zad-dl/Zad-dl.sh
 wget -N -P $HOME/.zad-dl/ http://i.imgur.com/gtao4rj.png
 #icon courtsey https://www.iconfinder.com/icons/406708/download_icon#size=128
+YouDown;
 fi
 else
 echo -e "\nAll programms and packages installed"
